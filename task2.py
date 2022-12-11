@@ -22,8 +22,8 @@ def mult_elem (input_list):
     На входе ожидает массив"""
     i=0
     multiplied_list = []
-    while i<=len(input_list)%2+1:
-        multiplied_list.append(input_list[i]*input_list[len(input_list)-i-1])
+    for position,elem in enumerate(input_list[0:len(input_list)//2]):
+        multiplied_list.append(elem*input_list[len(input_list)-position-1])
         i+=1
     return multiplied_list
 
